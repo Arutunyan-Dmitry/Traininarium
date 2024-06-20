@@ -1,0 +1,39 @@
+.footer .title {
+    margin: 1rem  1rem 0 1rem;
+    font-family: var(--header-font-family);
+    font-size: 2rem;
+    color: var(--dark-blue-color);
+}
+.footer .grey-line {
+    flex-grow: 1;
+    height: 1vh;
+    align-self: center;
+    background-color: grey;
+}
+.footer .body {
+    display: flex;
+    color: white;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 3rem 6rem 1.5rem 6rem;
+    background-color: grey;
+}
+.footer .body > p {
+    font-family: var(--header-font-family);
+    font-size: 1.5rem;
+    margin-right: 15vw;
+}
+.footer .body .row .col .head {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+}
+.footer .bottom {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    padding: 1.5rem 6rem 1rem 6rem;
+    border-top: 0.07rem solid white;
+    background-color: grey;
+}

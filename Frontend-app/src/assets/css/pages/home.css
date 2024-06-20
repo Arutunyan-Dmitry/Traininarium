@@ -1,0 +1,271 @@
+            /* --------- Carousel -------- */
+
+.carousel .carousel-inner .carousel-item {
+    height: 80vh;
+}
+.carousel .carousel-inner .carousel-item > img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+.carousel .carousel-indicators > button {
+    background-color: white !important;
+}
+.carousel .carousel-control-next > span, .carousel .carousel-control-prev > span {
+    filter: invert(0) grayscale(100) !important;
+}
+.carousel .carousel-caption {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel .carousel-caption > div > h2 {
+    font-family: var(--header-font-family);
+    color: white;
+    margin-bottom: 2rem;
+}
+.carousel .carousel-caption > div > p {
+    max-width: 55vw;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+.carousel .carousel-caption .first {
+    width: 13vw;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 0.1rem solid white;
+}
+.carousel .carousel-caption .first:hover {
+    color: black;
+    background-color: white;
+    border: 0.1rem solid white;
+}
+.carousel .carousel-caption .second {
+    width: 13vw;
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    border: 0.1rem solid white;
+}
+.carousel .carousel-caption .second:hover {
+    color: white;
+    background-color: transparent;
+    border: 0.1rem solid white;
+}
+
+            /* --------- About us -------- */
+
+.about-us .header {
+    margin-top: 5rem;
+}
+.about-us .pink-line {
+    height: 0.7rem;
+    width: 20vw;
+    background-color: var(--pink-color);
+    margin-bottom: 1rem;
+}
+.about-us .header > div > h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--header-font-family);
+    margin-bottom: 0;
+}
+.about-us .subtext-container,
+.beginning .subtext-container,
+.testing .subtext-container             { /* --- addon --- */
+    position: relative;
+    width: 100%;
+}
+.about-us .subtext-container > h1,
+.beginning .subtext-container > h1,
+.testing .subtext-container > h1        { /* --- addon --- */
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 100%;
+    transform: translate(-5%, 0%);
+    z-index: -999;
+    font-size: 6rem;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--grey-color);
+}
+
+.about-us .body {
+    margin-top: 11vh;
+}
+.about-us .body > div{
+    background-image: url('../../images/home/about-us-bg.png');
+    background-size: cover;
+    height: 70vh;
+    width: 85vw;
+    margin-bottom: 3rem;
+    padding: 4rem 30vw 1rem 5rem;
+}
+.about-us .body > div > p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    border-left: 0.5rem solid var(--pink-color);
+}
+.about-us .body > div > h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+}
+.about-us .body > div > h1 > b {
+    font-family: var(--header-font-family);
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+.about-us .body > div > ul {
+    color: var(--pink-color);
+    font-size: 2rem;
+}
+.about-us .body > div > ul > li > p {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+            /* --------- About us -------- */
+
+.beginning {
+    background-color: var(--light-grey-color);
+}
+.beginning .header {
+    padding-top: 4rem;
+}
+.beginning .blue-line {
+    height: 0.7rem;
+    width: 20vw;
+    background-color: var(--dark-blue-color);
+    margin-bottom: 1rem;
+}
+.beginning .header > div > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.beginning .subtext-container > h1 {
+    background-color: var(--light-grey-color);
+    z-index: 0;
+}
+
+.beginning .body {
+    margin-top: 11vh;
+    padding-bottom: 7vh;
+}
+.beginning .body .card {
+    margin-left: 6vw;
+    height: 50vh;
+    width: 17vw;
+    background-size: cover;
+    border: none;
+    color: white;
+    border-radius: 0;
+}
+.beginning .body .card > h1 {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.beginning .body .card > p {
+    margin: 1rem 1.5rem 0 1.5rem;
+}
+.beginning .body .card > p > span {
+    font-family: var(--header-font-family);
+}
+.beginning .body .card > span {
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.beginning .body .card .link {
+    margin: auto 1rem 1rem 1rem;
+}
+.beginning .body .card.sport {
+    background-image: url("../../images/home/card-1.jpg");
+}
+.beginning .body .card.survey {
+    background-image: url("../../images/home/card-2.jpg");
+}
+.beginning .body .card.blog {
+    background-image: url("../../images/home/card-3.jpg");
+}
+.beginning .footer .grey-circle {
+    background-color: grey;
+    margin: 0 1rem 2.5rem 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.middle-paragraph {
+    background-color: var(--dark-blue-color);
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 1rem;
+}
+.middle-paragraph > p {
+    margin: 0;
+}
+.middle-paragraph > p > span {
+    font-family: var(--header-font-family);
+}
+
+            /* --------- Testing -------- */
+
+.testing .header{
+    margin-top: 4rem;
+}
+.testing .blue-line {
+    height: 0.7rem;
+    width: 15vw;
+    background-color: var(--dark-blue-color);
+    margin-bottom: 1rem;
+}
+.testing .header > div > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.testing .body {
+    margin-top: 11vh;
+}
+.testing .body > div{
+    background-image: url('../../images/home/testing-bg.png');
+    background-size: cover;
+    height: 70vh;
+    width: 85vw;
+    margin-bottom: 3rem;
+    padding: 6rem 35vw 1rem 9rem;
+}
+.testing .body > div > p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.testing .body > div > ul {
+    color: var(--dark-blue-color);
+    font-size: 2rem;
+}
+.testing .body > div > ul > li > p {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.testing .body > div > button {
+    margin: 1rem 2rem;
+    width: 10vw;
+}
+

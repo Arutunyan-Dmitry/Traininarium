@@ -1,0 +1,23 @@
+risk_group_kp,verified,date_of_birth,height,gender,race,is_heart_diseased,is_diabetic,is_diabetic_with_diseases,diabetic_period,is_physical_activity,is_kidney_diseased,is_kidney_disease_chronic,is_cholesterol,is_smoker,is_alcoholic,is_stroked,is_asthmatic,is_skin_cancer,weight,physical_health,mental_health,is_difficult_to_walk,is_blood_pressure,general_health,sleep_time
+0.43,1,2024-03-24,177,Male,European,False,True,True,0,False,False,False,,True,False,False,False,True,75.0,2,15,False,False,Very good,8
+0.43,1,2024-03-24,177,Male,European,False,True,True,0,False,False,False,,True,False,False,False,True,75.0,2,15,False,False,Very good,8
+0.17,1,2002-06-24,177,Male,European,False,False,False,0,False,False,False,False,False,False,False,False,False,65.0,0,0,False,False,Poor,8
+0.17,1,2002-06-24,177,Male,European,False,False,False,0,False,False,False,False,False,False,False,False,False,65.0,0,0,False,False,Poor,8
+0.17,1,2002-06-24,177,Male,European,False,False,False,0,False,False,False,False,False,False,False,False,False,65.0,0,0,False,False,Poor,8
+0.52,1,2002-06-24,180,Male,Asian,True,False,False,0,False,False,False,False,False,False,False,False,False,65.0,0,0,False,False,Poor,4
+0.4,0,2002-06-24,156,Male,European,,,False,0,False,,False,False,False,False,,False,False,85.0,0,0,False,False,Poor,0
+0.8,0,2002-06-24,156,Male,European,,,False,0,True,,False,,True,True,,True,True,64.0,0,0,True,,Poor,0
+0.94,0,1957-06-24,167,Male,European,,,False,0,False,,False,False,True,True,,False,False,64.0,0,0,False,,Poor,5
+0.52,1,2002-06-24,177,Male,European,True,False,False,0,False,False,False,False,True,True,False,False,False,65.0,0,0,False,False,Fair,0
+0.53,1,2002-06-20,177,Male,European,True,False,False,0,False,False,False,False,False,False,False,False,False,65.0,0,0,False,False,Poor,5
+0.06,1,2002-06-24,177,Male,European,False,False,False,0,False,False,False,False,True,True,False,False,False,65.0,0,15,False,,Good,7
+0.53,1,2002-06-24,177,Male,European,True,False,False,0,False,False,False,False,False,False,False,False,False,65.0,0,0,False,False,Poor,8
+0.25,0,2002-06-24,177,Male,Asian,,,False,0,False,,False,,False,False,,False,False,76.0,0,0,False,,Poor,4
+0.42,1,2002-06-24,177,Male,European,False,False,False,0,True,True,True,False,False,True,True,False,False,65.0,10,17,False,False,Very good,5
+0.29,0,2002-06-24,177,Male,European,,,False,0,False,,False,,False,False,,False,False,65.0,0,0,False,False,Poor,3
+0.53,1,2002-06-24,177,Male,European,True,False,False,0,False,False,False,False,False,False,False,False,False,65.0,0,0,False,False,Poor,7
+0.06,1,2002-06-24,177,Male,European,False,False,False,0,False,False,False,False,False,False,False,False,False,65.0,0,0,False,False,Good,7
+0.3,1,2002-06-24,177,Male,European,False,,False,0,False,False,False,,True,True,False,False,False,67.2,0,15,False,True,Good,5
+0.28,0,2002-06-24,177,Female,European,,,False,0,False,,False,,True,False,,False,True,62.06,10,12,True,,Fair,7
+0.22,1,2002-06-24,165,Female,European,False,False,False,0,False,False,False,False,True,False,False,True,False,65.8,12,12,True,False,Fair,4
+0.06,1,2002-06-24,177,Male,European,False,False,False,0,False,False,False,False,True,False,False,False,False,67.2,0,7,False,False,Very good,7

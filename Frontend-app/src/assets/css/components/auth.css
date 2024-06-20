@@ -1,0 +1,177 @@
+                /*  -------- Login Modal ---------*/
+.loginModal .modal-header .modal-title{
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 2rem;
+    font-weight: bold;
+}
+.loginModal .modal-header > button{
+    margin-bottom: auto;
+    margin-top: 0.2rem;
+    margin-right: 0.1rem;
+}
+.loginModal .modal-header .modal-title > p{
+    padding-top: 0.5rem;
+    vertical-align: bottom;
+    margin-bottom: 0;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+.loginModal .modal-header .modal-title .modalLine{
+    background-color: var(--dark-blue-color);
+    width: 100%;
+    height: 0.5rem;
+    margin-bottom: 1rem;
+}
+.loginModal .modal-body {
+    padding: 1rem 1.5rem;
+}
+.loginModal .modal-body .submitContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+.loginModal .modal-body .submitContainer > button {
+    background-color: var(--dark-blue-color);
+    border: 0.1rem solid var(--dark-blue-color);
+}
+.loginModal .modal-body .submitContainer > button:hover {
+    background-color: white;
+    color: var(--dark-blue-color);
+    border: 0.1rem solid var(--dark-blue-color);
+}
+.loginModal .modal-body .submitContainer > button:active {
+    background-color: lightgray;
+    color: var(--dark-blue-color);
+    border: 0.1rem solid var(--dark-blue-color);
+}
+.loginModal .modal-body .errorContainer {
+    opacity: 1;
+    transition: opacity 0.3s, height 0.3s;
+}
+.loginModal .modal-body .errorContainer.hidden {
+    opacity: 0;
+    height: 0;
+}
+.loginModal .modal-body .errorContainer.visible {
+    height: 5.5rem;
+    transition: height 0.3s;
+}
+
+                /*  -------- Logout Modal ---------*/
+
+.logoutModal .modal-header > button {
+    margin-bottom: auto;
+    margin-top: 0.2rem;
+    margin-right: 0.1rem;
+}
+.logoutModal .modal-header .modal-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.logoutModal .modal-header .modal-title > h1 {
+    font-size: 2rem;
+    font-weight: 650;
+    margin-left: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: var(--dark-blue-color);
+    text-decoration-thickness: 0.5rem;
+}
+.logoutModal .modal-body > h2 {
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+    font-size: 10rem;
+    color: var(--dark-blue-color);
+}
+.logoutModal .modal-body > p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+.logoutModal .modal-footer .yes {
+    background-color: var(--dark-blue-color);
+    border: 0.1rem solid var(--dark-blue-color);
+}
+.logoutModal .modal-footer .yes:hover {
+    background-color: white;
+    color: var(--dark-blue-color);
+    border: 0.1rem solid var(--dark-blue-color);
+}
+.logoutModal .modal-footer .yes-admin {
+    background-color: var(--admin-red-color);
+    border: 0.1rem solid var(--admin-red-color);
+}
+.logoutModal .modal-footer .yes-admin:hover {
+    background-color: white;
+    color: var(--admin-red-dark-color);
+    border: 0.1rem solid var(--admin-red-dark-color);
+}
+
+                /*  -------- Register Modal ---------*/
+
+.registerModal .modal-dialog.wide {
+    max-width: 100%;
+    width: 820px !important;
+    transition: transform .3s ease-out, width 0.4s;
+}
+.registerModal .modal-dialog.thin {
+    max-width: 100%;
+    width: 520px !important;
+    transition: transform .3s ease-out, width 0.4s;
+}
+.registerModal .modal-dialog .modal-content .modal-body {
+    height: 60vh;
+}
+.registerModal .modal-header .modal-title{
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 2rem;
+    font-weight: bold;
+}
+.registerModal .modal-header > button{
+    margin-bottom: auto;
+    margin-top: 0.2rem;
+    margin-right: 0.1rem;
+}
+.registerModal .modal-header .modal-title > p{
+    padding-top: 0.5rem;
+    vertical-align: bottom;
+    margin-bottom: 0;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+.registerModal .modal-header .modal-title .modalLine{
+    background-color: var(--dark-blue-color);
+    width: 100%;
+    height: 0.5rem;
+    margin-bottom: 1rem;
+}
+.registerModal .registration {
+    display: flex;
+}
+.registerModal .registration > div {
+    margin: 0 1rem;
+    width: 50%;
+}
+.registerModal .activation {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.registerModal .activation > div > input {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    width: 15vw;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: 0.1rem solid lightgray;
+}
+.registerModal .activation > div > input::placeholder {
+    color: grey;
+}

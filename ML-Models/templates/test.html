@@ -1,0 +1,330 @@
+{% extends 'layouts/form_layout.html' %}
+{% block title %}Предсказание{% endblock %}
+{% block h1 %}Введите свои данные для предсказания группы риска{% endblock %}
+{% block body %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>{{ messages }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endwith %}
+
+<form method="post" enctype="multipart/form-data" style="min-width: 90vh">
+    <div class="d-flex justify-content-around mt-3 mb-3">
+        <div style="width: 40vh">
+            <label>Есть ли у вас ССЗ?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="heart_disease" id="HD_1" value=1 checked>
+                <label class="form-check-label" for="HD_1">
+                    Да
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="heart_disease" id="HD_0" value=0>
+                <label class="form-check-label" for="HD_0">
+                    Нет
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="heart_disease" id="HD_None" value=None>
+                <label class="form-check-label" for="HD_None">
+                    Не знаю
+                </label>
+            </div>
+        </div>
+        <div style="width: 40vh">
+            <label>Есть ли у вас сахарный диабет?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="diabetic" id="D_1" value=1 checked>
+                <label class="form-check-label" for="D_1">
+                    Да
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="diabetic" id="D_0" value=0>
+                <label class="form-check-label" for="D_0">
+                    Нет
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="diabetic" id="D_None" value=None>
+                <label class="form-check-label" for="D_None">
+                    Не знаю
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around mt-3 mb-3">
+        <div style="width: 40vh">
+            <label>Есть ли у вас хронические заболевания почек?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="kidney_disease" id="KD_1" value=1 checked>
+                <label class="form-check-label" for="KD_1">
+                    Да
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="kidney_disease" id="KD_0" value=0>
+                <label class="form-check-label" for="KD_0">
+                    Нет
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="kidney_disease" id="KD_None" value=None>
+                <label class="form-check-label" for="KD_None">
+                    Не знаю
+                </label>
+            </div>
+        </div>
+        <div style="width: 40vh">
+            <label>Есть ли у вас заболевания глаз, центральной нервной системы, сосудов и сердца... ?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="diabetic_disease" id="DD_1" value=1 checked>
+                <label class="form-check-label" for="DD_1">
+                    Да
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="diabetic_disease" id="DD_0" value=0>
+                <label class="form-check-label" for="DD_0">
+                    Нет
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around mt-3 mb-3">
+        <div style="width: 40vh">
+            <label>Выражены они в хронической или умеренной форме?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="kidney_disease_chronic" id="KDC_1" value=1 checked>
+                <label class="form-check-label" for="KDC_1">
+                    В хронической
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="kidney_disease_chronic" id="KDC_0" value=0>
+                <label class="form-check-label" for="KDC_0">
+                    В умеренной
+                </label>
+            </div>
+        </div>
+        <div style="width: 40vh">
+            <label class="mb-2">Примерный период наличия диабета</label>
+            <input type=number class="form-control" name="diabetic_period" min="1" placeholder="20" step="1"/>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around mt-3 mb-3">
+        <div style="width: 40vh">
+            <label>Повышен ли ваш уровень холестерина?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="cholesterol" id="C_1" value=1 checked>
+                <label class="form-check-label" for="C_1">
+                    Да
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="cholesterol" id="C_0" value=0>
+                <label class="form-check-label" for="C_0">
+                    Нет
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="cholesterol" id="C_None" value=None>
+                <label class="form-check-label" for="C_None">
+                    Не знаю
+                </label>
+            </div>
+        </div>
+        <div style="width: 40vh">
+            <label>Ваше АД выше 180/100?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ad" id="AD_1" value=1 checked>
+                <label class="form-check-label" for="AD_1">
+                    Да
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ad" id="AD_0" value=0>
+                <label class="form-check-label" for="AD_0">
+                    Нет
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ad" id="AD_None" value=None>
+                <label class="form-check-label" for="AD_None">
+                    Не знаю
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-flex">
+            <span class="input-group-text">ИМТ</span>
+            <input type=number class="form-control" name="BMI" min="1" placeholder="20" step="0.01"/>
+            <span class="input-group-text">Физически плохое самочувствие</span>
+            <input type=number class="form-control" name="PhysicalHealth" min="0" max="30" placeholder="0"/>
+            <span class="input-group-text">дней в мес.</span>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-flex">
+            <span class="input-group-text">Ментально плохое самочувствие</span>
+            <input type=number class="form-control" name="MentalHealth" min="0" max="30" placeholder="0"/>
+            <span class="input-group-text">дней в мес.</span>
+            <span class="input-group-text">Время сна</span>
+            <input type=number class="form-control" name="SleepTime" min="0" max="24" placeholder="8"/>
+            <span class="input-group-text">час. в день</span>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-flex justify-content-around">
+            <div>
+                <span>Выкурили ли вы 5 пачек сигарет за свою жизнь?</span>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="Smoking" name="Smoking">
+                    <label class="form-check-label" for="Smoking">Нет / Да</label>
+                </div>
+                <span>Был ли у вас инсульт?</span>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="Stroke" name="Stroke">
+                    <label class="form-check-label" for="Stroke">Нет / Да</label>
+                </div>
+                <span>Выберите ваш пол</span>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="Sex" name="Sex">
+                    <label class="form-check-label" for="Sex">Ж / М</label>
+                </div>
+                <span>Занимаетесь ли вы спортом?</span>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="PhysicalActivity"
+                           name="PhysicalActivity">
+                    <label class="form-check-label" for="PhysicalActivity">Нет / Да</label>
+                </div>
+            </div>
+            <div>
+                <span>Много ли вы употребляете алкоголя?</span>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="AlcoholDrinking"
+                           name="AlcoholDrinking">
+                    <label class="form-check-label" for="AlcoholDrinking">Нет / Да</label>
+                </div>
+                <span>Трудно ли вам ходить?</span>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="DiffWalking"
+                           name="DiffWalking">
+                    <label class="form-check-label" for="DiffWalking">Нет / Да</label>
+                </div>
+                <span>Есть ли у вас астма?</span>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="Astma" name="Astma">
+                    <label class="form-check-label" for="Astma">Нет / Да</label>
+                </div>
+                <span>Есть ли у вас рак кожи?</span>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="SkinCancer" name="SkinCancer">
+                    <label class="form-check-label" for="SkinCancer">Нет / Да</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3 mb-3">
+        <span>Выберите свою национальную принадлежность</span>
+    </div>
+    <div class="d-flex justify-content-around">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="Race" id="European" value="European" checked>
+            <label class="form-check-label" for="European">
+                Европеец
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="Race" id="Indian" value="Indian">
+            <label class="form-check-label" for="Indian">
+                Индус
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="Race" id="African" value="African">
+            <label class="form-check-label" for="African">
+                Африканец
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="Race" id="American" value="American">
+            <label class="form-check-label" for="American">
+                Американец
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="Race" id="Asian" value="Asian">
+            <label class="form-check-label" for="Asian">
+                Азиат
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="Race" id="Other" value="Other">
+            <label class="form-check-label" for="Other">
+                Другая
+            </label>
+        </div>
+    </div>
+    <div class="mt-3 mb-3">
+        <span>Укажите ваше настроение сейчас</span>
+    </div>
+    <div class="d-flex justify-content-around">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="GeneralHealth" id="Excellent" value="Excellent"
+                   checked>
+            <label class="form-check-label" for="Excellent">
+                Превосходное
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="GeneralHealth" id="Very good" value="Very good">
+            <label class="form-check-label" for="Very good">
+                Очень хорошее
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="GeneralHealth" id="Good" value="Good">
+            <label class="form-check-label" for="Good">
+                Хорошее
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="GeneralHealth" id="Fair" value="Fair">
+            <label class="form-check-label" for="Fair">
+                Нормальное
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="GeneralHealth" id="Poor" value="Poor">
+            <label class="form-check-label" for="Poor">
+                Плохое
+            </label>
+        </div>
+    </div>
+    <div class="mb-3 mt-3 d-flex">
+        <span class="input-group-text">Укажите свой возраст</span>
+        <input type=number class="form-control" name="Age" min="0" placeholder="0"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Предсказать</button>
+    <a class="btn btn-light" href="/regression/logistic" role="button">Отмена</a>
+</form>
+{% endblock %}

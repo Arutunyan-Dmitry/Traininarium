@@ -1,0 +1,42 @@
+                /*  -------- Loading Component ---------*/
+
+.loading {
+    position: absolute;
+    z-index: 2;
+    width: calc(100% - 3rem);
+    height: calc(100% - 2rem);
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+}
+.loading > div{
+    margin: 20% 1.3rem auto 1.3rem;
+    background-color: var(--dark-blue-color);
+}
+
+                /*  -------- Error Component ---------*/
+
+.error > p {
+    margin: 0;
+}
+
+                /*  -------- Success Toast ---------*/
+
+.successToast {
+    position: fixed;
+    z-index: 10;
+    bottom: 1rem;
+    left: calc(100vw - 380px)
+}
+
+.successToast .toast-header {
+    color: forestgreen;
+    background-color: #c8d9c5;
+    border: 0.2rem solid forestgreen;
+}
+.successToast .toast-body {
+    font-weight: 500;
+    border: 0.2rem solid forestgreen;
+    border-top: none;
+    background-color: white;
+}

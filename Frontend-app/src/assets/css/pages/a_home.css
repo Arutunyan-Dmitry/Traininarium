@@ -1,0 +1,71 @@
+
+.admin-charts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    padding: 1.5rem;
+    border: 0.1rem solid var(--light-grey-color);
+    border-radius: 1rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.admin-charts .admin-chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+}
+.admin-charts .admin-chart > p {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-color: var(--admin-red-color);
+    text-decoration-thickness: 0.5rem;
+}
+.admin-ban {
+    height: 3vh;
+    padding: 0;
+    font-weight: 600;
+    color: var(--admin-red-color);
+}
+.admin-ban:hover {
+    color: var(--admin-red-dark-color);
+}
+.admin-ban:active {
+    color: var(--admin-red-dark-color) !important;
+}
+.admin-unban {
+    height: 3vh;
+    padding: 0;
+    font-weight: 600;
+    color: #30cf3d;
+}
+.admin-unban:hover {
+    color: darkgreen;
+}
+.admin-unban:active {
+    color: darkgreen !important;
+}
+.admin-users-form {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border: 0.1rem solid var(--light-grey-color);
+    border-radius: 1rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.admin-users-form .search{
+    width: 20vw;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    border-right: 0.1rem solid var(--light-grey-color);
+}
+.admin-users-form .filter > p{
+    font-weight: 650;
+}
+.admin-users-table {
+    margin-bottom: 4rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}

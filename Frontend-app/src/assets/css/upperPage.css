@@ -1,0 +1,12 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 3vw;
+  left: 93.5vw;
+}
+
+.scroll-to-top > button {
+  background-color: var(--dark-blue-color);
+  color: white;
+  border-radius: 2rem;
+  border: 0.5rem solid var(--dark-blue-color);
+}

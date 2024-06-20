@@ -1,0 +1,152 @@
+:root {
+    --header-font-family: "Ultra", serif;
+    --base-font-family: "Montserrat", sans-serif;
+    --dark-blue-color: #3B5BDB;
+    --dark-blue-color-rgba: 59, 91, 219;
+    --blue-color: #748FFC;
+    --blue-color-rgba: 116, 143, 252;
+    --light-blue-color: #BAC8FF;
+    --light-blue-color-rgba: 186, 200, 255;
+    --lighter-blue-color: #F0F5FF;
+    --lighter-blue-color-rgba: 240, 245, 255;
+    --pink-color: #F27DA9;
+    --pink-color-rgba: 242, 125, 169;
+    --dark-pink-color: #ac3763;
+    --light-pink-color: #FFB2CF;
+    --light-pink-color-rgba: 255, 178, 207;
+    --light-grey-color: #F6F6F6;
+    --grey-color: #E2E2E2;
+    --error-color: #DC143C;
+    --admin-red-color: #DC143C;
+    --admin-red-color-rgba: 220, 20, 60;
+    --admin-red-light-color: #e08282;
+    --admin-red-light-color-rgba: 224, 130, 130;
+    --admin-red-dark-color: #B22222;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 470;
+}
+input {
+    font-weight: 470 !important;
+}
+.startAppLogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    font-family: var(--header-font-family);
+    font-size: 5rem;
+    color: var(--dark-blue-color);
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: logoFadeIn 2s infinite;
+}
+.startAppLogo.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.app {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.app.show {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+@keyframes logoFadeIn {
+    0% { color: rgba(var(--dark-blue-color-rgba), 0); }
+    50% { color: rgba(var(--dark-blue-color-rgba), 1); }
+    100% { color: rgba(var(--dark-blue-color-rgba), 0); }
+}
+
+.traininariumFade-enter {
+  opacity: 0;
+}
+.traininariumFade-enter-active {
+  opacity: 1;
+  transition: opacity 700ms;
+}
+.traininariumFade-exit {
+  opacity: 1;
+}
+.traininariumFade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.bth-dark-blue {
+    background-color: var(--dark-blue-color) !important;
+    font-weight: 550 !important;
+    border: 0.1rem solid var(--dark-blue-color) !important;
+}
+.bth-dark-blue:hover {
+    background-color: white !important;
+    color: var(--dark-blue-color) !important;
+}
+.bth-dark-blue:active {
+    background-color: var(--light-grey-color) !important;
+    color: #0a53be !important;
+}
+
+.bth-dark-blue-inv {
+    background-color: white !important;
+    color: var(--dark-blue-color) !important;
+    font-weight: 550 !important;
+    border: 0.1rem solid var(--dark-blue-color) !important;
+}
+.bth-dark-blue-inv:hover {
+    background-color: var(--dark-blue-color) !important;
+    color: white !important;
+}
+.bth-dark-blue-inv:active {
+    background-color: #0a53be !important;
+    color: white !important;
+}
+
+.bth-pink {
+    background-color: var(--pink-color) !important;
+    font-weight: 550 !important;
+    border: 0.1rem solid var(--pink-color) !important;
+}
+.bth-pink:hover {
+    background-color: white !important;
+    color: var(--pink-color) !important;
+}
+.bth-pink:active {
+    background-color: var(--light-grey-color) !important;
+    color: var(--dark-pink-color) !important;
+}
+.bth-white-inv {
+    font-size: 1.2rem;
+    background-color: transparent !important;
+    border: 0.1rem solid white !important;
+}
+.bth-white-inv:hover {
+    background-color: white !important;
+    color: black !important;
+    border: 0.1rem solid white !important;
+}
+.bth-white-inv:active {
+    background-color: lightgray !important;
+    color: black !important;
+    border: 0.1rem solid lightgray !important;
+}
+.bth-admin {
+    font-weight: 500;
+    background-color: var(--admin-red-color) !important;
+    border: 0.1rem solid var(--admin-red-color) !important;
+}
+.bth-admin:hover {
+    background-color: var(--admin-red-dark-color) !important;
+    border: 0.1rem solid var(--admin-red-dark-color) !important;
+}
+.bth-admin:active {
+    filter: brightness(90%);
+}

@@ -1,0 +1,48 @@
+{% load i18n %}
+
+{% block subject %}
+    {% blocktrans %}Активация аккаунта на сервисе {{ site_name }}{% endblocktrans %}
+{% endblock subject %}
+
+{% block text_body %}
+    {% blocktrans %}Вы получили данное сообщение, поскольку вам необходимо завершить регистрацию на сервисе
+        {{ site_name }} и активировать свой аккаунт.{% endblocktrans %}
+
+    {% trans "Пожалуйста введите данный код для завершения регистрации в приложении:" %}
+    {{ code }}
+
+    {% blocktrans %} Если вы не регистрировались на сервисе {{ site_name }}, пожалуйста, проигнорируйте данное
+        сообщение. Мы уверяем вас, что сделаем всё возможное, чтобы данная ситуация не повторялась. Спасибо за
+        понимание! {% endblocktrans %}
+
+    {% trans "Спасибо что выбрали нас!" %}
+
+    {% blocktrans %}С уважением, команда {{ site_name }}{% endblocktrans %}
+{% endblock text_body %}
+
+{% block html_body %}
+    <p style="font-size: large; font-family: 'Calibri',serif; margin-bottom: 2%">{% blocktrans %}Вы получили
+        данное сообщение, поскольку вам
+        необходимо завершить регистрацию на сервисе
+        {{ site_name }} и активировать свой аккаунт.{% endblocktrans %}</p>
+
+    <p style="font-size: large; font-family: 'Calibri',serif;">{% trans "Пожалуйста введите данный код для завершения регистрации в приложении:" %}</p>
+    <div style="display: flex; justify-content: center;">
+        <div style="background-color: #F5F5F5; min-width: 30%;">
+            <p style="font-size: xx-large; text-align: center;">{{ code }}</p>
+        </div>
+    </div>
+
+
+    <p style="font-size: large; font-family: 'Calibri',serif; margin-bottom: 2%">{% blocktrans %} Если вы не
+        регистрировались на сервисе
+        {{ site_name }}, пожалуйста, проигнорируйте данное
+        сообщение. Мы уверяем вас, что сделаем всё возможное, чтобы данная ситуация не повторялась. Спасибо за
+        понимание! {% endblocktrans %}</p>
+
+    <p style="font-size: large; font-family: 'Calibri',serif; margin-bottom: 2%">{% trans "Спасибо что выбрали нас!" %}</p>
+
+    <p style="font-size: large; font-family: 'Calibri',serif; margin-bottom: 15%">{% blocktrans %}С уважением,
+        команда
+        {{ site_name }}{% endblocktrans %}</p>
+{% endblock html_body %}

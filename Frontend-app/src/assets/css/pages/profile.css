@@ -1,0 +1,317 @@
+.profile {
+    margin-top: 15vh;
+}
+.profile .sideMenu {
+    position: fixed;
+    width: 20vw;
+}
+.profile .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.profile .title > span {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.profile .title > p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+.profile .sideMenuItem {
+    margin-right: 3rem;
+}
+.profile .sideMenuItem > button {
+    width: 100%;
+    text-align: start;
+    color: black;
+    background-color: white;
+    border: none;
+}
+.profile .sideMenuItem > button:hover {
+    color: black;
+    background-color: var(--light-grey-color);
+}
+.profile .sideMenuItem > button:active {
+    color: black;
+    background-color: var(--grey-color);
+}
+.profile .active.sideMenuItem > button {
+    width: 100%;
+    text-align: start;
+    color: black;
+    background-color: var(--grey-color);
+    border: none;
+}
+
+.profile .p-container {
+    margin-left: 20vw;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    min-height: 120vh;
+    background-color: var(--light-grey-color);
+    border-radius: 1rem;
+}
+.profile .p-container .chartArea {
+    padding: 1rem 1rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+.profile .p-container .chartArea.fade-in {
+    opacity: 1;
+    transition: opacity 0.7s;
+}
+.profile .p-container .chartArea.fade-out {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.7s;
+}
+.profile .p-container .chartArea .header {
+    padding-bottom: 0.3rem;
+    border-bottom: 0.1rem solid lightgray;
+ }
+.profile .p-container .chartArea .title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 650;
+}
+.profile .p-container .chartArea .next, .profile .p-container .chartArea .prev {
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    border: none;
+}
+.profile .p-container .chartArea .next:hover, .profile .p-container .chartArea .prev:hover  {
+    color: grey;
+    background-color: white;
+    border: none;
+}
+.profile .p-container .chartArea .chartPlace {
+    display: flex;
+    justify-content: center;
+    height: 25vw;
+    padding: 0.5rem 0;
+}
+.profile .p-container .chartArea .chartPlace > div {
+    padding: 1rem;
+}
+
+.profile .p-container .userStaticData {
+    margin-top: 1rem;
+    padding: 1.5rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+.profile .p-container .userStaticData .title-container {
+    display: flex;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 0.1rem solid lightgray;
+}
+.profile .p-container .userStaticData .title-container .title{
+    margin: 0 0.5rem 0 1.5rem;
+    align-self: flex-end;
+    font-size: 1.2rem;
+    font-weight: 650;
+}
+.profile .p-container .userStaticData .title-container .title-upd{
+    margin: 0;
+    align-self: flex-end;
+    font-size: 0.8rem;
+}
+.profile .p-container .userStaticData .subtitle {
+    margin: 1.2rem 0 0.7rem 0;
+    padding: 0 0 0.1rem 1.5rem;
+    width: 45vw;
+    color: var(--dark-blue-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 0.1rem solid lightgray;
+}
+.profile .p-container .userStaticData .changeData {
+    align-self: flex-end;
+    font-size: 0.8rem;
+}
+.profile .p-container .userStaticData .col {
+    padding-right: 3rem;
+    border-right: 0.1rem solid lightgray;
+}
+.profile .p-container .userStaticData .col.last {
+    border: none;
+}
+.profile .p-container .userStaticData .col > li {
+    padding: 0.2rem 0 0.2rem 0;
+}
+.profile .p-container .userStaticData .col > li.disabled {
+    background-color: var(--light-grey-color);
+    color: grey;
+    padding: 0.3rem 0 0.3rem 1rem;
+}
+.profile .p-container .userStaticData .col > li.enabled {
+    padding: 0.3rem 0 0.3rem 1rem;
+}
+
+.profile .p-container .userDynamicData {
+    margin-top: 1rem;
+    padding: 1.5rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+.profile .p-container .userDynamicData .title-container {
+    display: flex;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid lightgray;
+}
+.profile .p-container .userDynamicData .title-container .title {
+    margin: 0 0.5rem 0 1.5rem;
+    align-self: flex-end;
+    font-size: 1.2rem;
+    font-weight: 650;
+}
+.profile .p-container .userDynamicData .title-container .label{
+    margin: 0 0.5rem 0.2rem 1rem;
+    align-self: flex-end;
+}
+.profile .p-container .userDynamicData .title-container > select{
+    width: 12vw;
+    height: 4vh;
+    color: var(--dark-blue-color);
+    font-weight: 600;
+    font-size: 0.8rem;
+    border: 0.08rem solid var(--dark-blue-color);
+}
+.profile .p-container .userDynamicData .addData {
+    align-self: flex-end;
+    font-size: 0.8rem;
+}
+.profile .p-container .userDynamicData .body > li {
+    padding: 0.2rem 0 0.2rem 0;
+    margin-left: 1rem;
+}
+.profile .p-container .userDynamicData .blank {
+    margin-top: 1rem;
+}
+.profile .p-container .userDynamicData .col > li {
+    padding: 0.2rem 0 0.2rem 0;
+}
+.profile .p-container .userDynamicData .subtitle {
+    margin: 1.2rem 0 0.7rem 0;
+    padding: 0 0 0.1rem 2rem;
+    width: 45vw;
+    color: var(--dark-blue-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 0.1rem solid lightgray;
+}
+
+.staticInfoModal .modal-dialog .modal-header .modal-title,
+.dynamicInfoModal .modal-dialog .modal-header .modal-title{
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 2rem;
+    font-weight: bold;
+}
+.staticInfoModal .modal-dialog .modal-header > button,
+.dynamicInfoModal .modal-dialog .modal-header > button{
+    margin-bottom: auto;
+    margin-top: 0.2rem;
+    margin-right: 0.1rem;
+}
+.staticInfoModal .modal-dialog .modal-header .modal-title > p,
+.dynamicInfoModal .modal-dialog .modal-header .modal-title > p{
+    text-align: center;
+    padding-top: 0.5rem;
+    vertical-align: bottom;
+    margin-bottom: 0;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+.staticInfoModal .modal-dialog .modal-header .modal-title .modalLine,
+.dynamicInfoModal .modal-dialog .modal-header .modal-title .modalLine{
+    background-color: var(--dark-blue-color);
+    width: 100%;
+    height: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+.staticInfoModal .subtitle, .dynamicInfoModal .subtitle {
+    margin: 0.9rem 0 0.7rem 0;
+    padding: 0 0 0.1rem 2rem;
+    width: 45vw;
+    color: var(--dark-blue-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 0.1rem solid lightgray;
+}
+.staticInfoModal .row {
+    margin-bottom: 0.5rem;
+}
+.staticInfoModal .controlFormContent, .dynamicInfoModal .controlFormContent {
+    display: flex;
+    align-items: flex-end;
+}
+.staticInfoModal .radioFormContent, .dynamicInfoModal .radioFormContent {
+    display: flex;
+}
+.staticInfoModal .controlFormContent > label,
+.staticInfoModal .radioFormContent > label,
+.dynamicInfoModal .controlFormContent > label,
+.dynamicInfoModal .radioFormContent > label {
+    margin-right: 0.5rem;
+}
+.staticInfoModal .radioFormContent .form-check,
+.dynamicInfoModal .radioFormContent .form-check {
+    margin-right: 0.5rem;
+}
+.staticInfoModal .disabled-area {
+    margin-left: 0.3rem;
+    padding-left: 0.6rem;
+    background-color: var(--light-grey-color);
+    border: 0.1rem solid var(--light-grey-color) !important ;
+    border-radius: 0.7rem !important;
+    transition: background-color 0.4s;
+}
+.staticInfoModal .disabled-area.enable {
+    background-color: white;
+    transition: background-color 0.2s;
+}
+.staticInfoModal .hdTrigger {
+    font-weight: 600;
+    color: var(--dark-blue-color);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+.staticInfoModal .hdTrigger:hover {
+    color: darkblue;
+    transition: 0.3s;
+}
+
+.dynamicInfoModal .general-health-icons {
+    color: var(--dark-blue-color);
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+}
+.dynamicInfoModal .general-health-label {
+    font-size: 0.8rem;
+}
+.dynamicInfoModal .modal-dialog .modal-content .modal-body {
+    padding: 0.5rem 4rem;
+}
+.dynamicInfoModal .input-group {
+    display: block;
+}
+
+.profile .profileSettings {
+    color: grey;
+    padding: 5rem 4rem;
+}
+.profile .profileSettings .profileWarning {
+    font-size: 4rem;
+    text-align: center;
+}
+.profile .profileSettings .profileWarningText {
+    text-align: center;
+}

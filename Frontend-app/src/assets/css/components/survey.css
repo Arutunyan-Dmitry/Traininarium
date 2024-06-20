@@ -1,0 +1,363 @@
+                /*  -------- General Style ---------*/
+.survey .modal-dialog {
+    max-width: 35rem;
+}
+.survey .modal-dialog .modal-header .modal-title{
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 2rem;
+    font-weight: bold;
+}
+.survey .modal-dialog .modal-header > button{
+    margin-bottom: auto;
+    margin-top: 0.2rem;
+    margin-right: 0.1rem;
+}
+.survey .modal-dialog .modal-header .modal-title > p{
+    text-align: center;
+    padding-top: 0.5rem;
+    vertical-align: bottom;
+    margin-bottom: 0;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+.survey .modal-dialog .modal-header .modal-title .modalLine{
+    background-color: var(--dark-blue-color);
+    width: 100%;
+    height: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+.survey .modal-dialog .modal-body {
+    padding: 1rem 1.5rem;
+}
+.survey .modal-content {
+    transition: opacity 0.7s;
+}
+.survey .fade-in {
+    opacity: 1;
+    min-height: calc(100vh - 4rem);
+}
+.survey .fade-out {
+    opacity: 0;
+    position: absolute;
+}
+.survey .input-group {
+    display: block;
+}
+.survey .two-choice {
+    display: flex;
+    justify-content: space-evenly;
+}
+.survey .three-choice {
+    display: flex;
+    justify-content: flex-start;
+}
+.survey .three-choice .form-check {
+    margin-right: 1.5rem;
+}
+
+                /*  -------- Buttons ---------*/
+
+.survey .prev {
+    background-color: white;
+    color: var(--dark-blue-color);
+    border: 0.1rem solid var(--dark-blue-color);
+}
+.survey .prev:hover {
+    background-color: var(--dark-blue-color);
+    color: white;
+    border: 0.1rem solid var(--dark-blue-color);
+}
+.survey .prev:active {
+    background-color: darkblue !important;
+    color: white;
+    border: 0.1rem solid darkblue !important;
+}
+.survey .next {
+    background-color: var(--dark-blue-color);
+    border: 0.1rem solid var(--dark-blue-color);
+}
+.survey .next:hover {
+    background-color: white;
+    color: var(--dark-blue-color);
+    border: 0.1rem solid var(--dark-blue-color);
+}
+.survey .next:active {
+    background-color: lightgray !important;
+    color: var(--dark-blue-color) !important;
+    border: 0.1rem solid var(--dark-blue-color) !important;
+}
+.survey .submit {
+    background-color: var(--pink-color);
+    border: 0.1rem solid var(--pink-color);
+}
+.survey .submit:hover {
+    background-color: white;
+    color: var(--pink-color);
+    border: 0.1rem solid var(--pink-color);
+}
+.survey .submit:active {
+    background-color: lightgray !important;
+    color: var(--pink-color) !important;
+    border: 0.1rem solid var(--pink-color) !important;
+}
+
+                /*  -------- Privacy Policy ---------*/
+
+.survey .is_using_data_agreed {
+    display: flex;
+    justify-content: left;
+}
+.survey .is_using_data_agreed > div {
+    margin: 0 0.7rem;
+}
+
+                /*  -------- Data ---------*/
+.survey .gender {
+    display: flex;
+    justify-content: space-around;
+}
+.hdTooltip .tooltip-inner {
+    max-width: 30vh;
+    color: black;
+    background-color: var(--lighter-blue-color);
+    border: 0.2rem solid var(--dark-blue-color);
+    opacity: 1;
+    text-align: start;
+    padding: 0;
+}
+.hdTooltip .tooltip-inner > ul{
+    margin: 0.5rem 1rem 0.5rem 0;
+    font-size: 1rem;
+}
+.survey .hdTrigger {
+    font-weight: 600;
+    color: var(--dark-blue-color);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+.survey .hdTrigger:hover {
+    color: darkblue;
+    transition: 0.3s;
+}
+.survey .disabled-area, .survey .disabled-area-ment,
+.survey .disabled-area-phys {
+    padding: 0.4rem 0.8rem;
+    margin-left: 0.5rem !important;
+    background-color: var(--light-grey-color);
+    border: 0.1rem solid var(--light-grey-color) !important ;
+    border-radius: 0.7rem !important;
+    transition: background-color 0.4s;
+}
+.survey .disabled-area.enable, .survey .disabled-area-ment.enable,
+.survey .disabled-area-phys.enable {
+    background-color: white;
+    transition: background-color 0.2s;
+}
+.survey .general-health-icons {
+    color: var(--dark-blue-color);
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+}
+.survey .general-health-label {
+    font-size: 0.8rem;
+}
+.survey .mental-health-input, .survey .physical-health-input {
+    width: 10rem
+}
+
+                /*  -------- Result ---------*/
+
+.survey .result-container {
+    --target-opacity-border: 1;
+    --target-opacity: 0.1;
+    height: 15rem;
+    border: 0.15rem solid;
+    border-radius: 0.7rem;
+    width: 36vh;
+    animation: border-color-animation 5s forwards, back-color-animation 5s forwards;
+}
+
+/* --- histogram --- */
+.survey .scale {
+    --target-value: 100%;
+    --target-opacity: 1;
+    --target-color-1: #9ACD32;
+    --target-color-2: #FFD700;
+    --target-color-3: #FF6347;
+    --target-color-4: #C71585;
+    --target-color-5: #DC143C;
+    position: relative;
+    left: 3%;
+    width: 20vh;
+    height: 100%;
+    background-color: #f0f0f0;
+    border: 0.1rem solid black;
+}
+.survey .scale::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.6;
+    animation: scale-animation 5s forwards, back-color-animation 5s forwards;
+}
+.survey .axe-x {
+    position: relative;
+    bottom: 0.5vh;
+    width: 26vh;
+    height: 0.15rem;
+    background-color: black;
+}
+.survey .axe-y {
+    position: relative;
+    bottom: calc(100% + 0.7vh);
+    left: 23vh;
+    width: 0.15rem;
+    height: 100%;
+    background-color: black;
+}
+.survey .dynamic-axe-x {
+    --target-value: 100%;
+    position: relative;
+    left: 0.2vh;
+    width: 25vh;
+    height: 0.15rem;
+    background-color: black;
+    animation: axe-x-animation 5s forwards;
+}
+.survey .risk-counter {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    left: 16vh;
+    bottom: 1.5rem;
+}
+    /* --- animation ---*/
+    @keyframes scale-animation {
+        0% { height: 0; }
+        100% { height: var(--target-value); }
+    }
+    @keyframes back-color-animation {
+        0% { background-color: rgba(var(--target-color-1), var(--target-opacity)); }
+        10% { background-color: rgba(var(--target-color-1), var(--target-opacity)); }
+        20% { background-color: rgba(var(--target-color-2), var(--target-opacity)); }
+        30% { background-color: rgba(var(--target-color-2), var(--target-opacity)); }
+        40% { background-color: rgba(var(--target-color-3), var(--target-opacity)); }
+        50% { background-color: rgba(var(--target-color-3), var(--target-opacity)); }
+        60% { background-color: rgba(var(--target-color-4), var(--target-opacity)); }
+        70% { background-color: rgba(var(--target-color-4), var(--target-opacity)); }
+        80% { background-color: rgba(var(--target-color-5), var(--target-opacity)); }
+        100% { background-color: rgba(var(--target-color-5), var(--target-opacity)); }
+    }
+    @keyframes border-color-animation {
+        0% { border-color: rgba(var(--target-color-1), var(--target-opacity-border)); }
+        10% { border-color: rgba(var(--target-color-1), var(--target-opacity-border)); }
+        20% { border-color: rgba(var(--target-color-2), var(--target-opacity-border)); }
+        30% { border-color: rgba(var(--target-color-2), var(--target-opacity-border)); }
+        40% { border-color: rgba(var(--target-color-3), var(--target-opacity-border)); }
+        50% { border-color: rgba(var(--target-color-3), var(--target-opacity-border)); }
+        60% { border-color: rgba(var(--target-color-4), var(--target-opacity-border)); }
+        70% { border-color: rgba(var(--target-color-4), var(--target-opacity-border)); }
+        80% { border-color: rgba(var(--target-color-5), var(--target-opacity-border)); }
+        100% { border-color: rgba(var(--target-color-5), var(--target-opacity-border)); }
+    }
+    @keyframes axe-x-animation {
+        0% { bottom: 0; }
+        100% { bottom: var(--target-value); }
+    }
+
+/* --- result presentation --- */
+.survey .result-number {
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    left: 40vh;
+    opacity: 0;
+}
+.survey .risk-verify {
+    text-align: center;
+    position: absolute;
+    top: 18vh;
+    left: 42vh;
+    width: 30vh;
+    height: 16vh;
+    opacity: 0;
+}
+.survey .risk-verify.success {
+    border: 0.15rem solid green;
+}
+.survey .risk-verify.error {
+    border: 0.15rem solid darkred;
+}
+.survey .result-explain {
+    background-color: var(--lighter-blue-color);
+    border: 0.15rem solid var(--dark-blue-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    opacity: 0;
+}
+.survey .verify-explain {
+    background-color: var(--bs-danger-bg-subtle);
+    border: 0.15rem solid darkred;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    opacity: 0;
+}
+.survey .result-title {
+    font-family: var(--header-font-family);
+    font-size: 2rem;
+    color: var(--dark-blue-color);
+    text-align: center;
+    margin-top: 2rem;
+    opacity: 0;
+}
+.survey .verify-explain.show, .survey .result-title.show,
+.survey .result-explain.show, .survey .risk-verify.visible,
+.survey .result-number.show{
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+/* --- loaders --- */
+.survey .risk-loading-lg {
+    position: absolute;
+    top: 33vh;
+    left: 0;
+    margin: 1.5rem;
+    width: calc(100% - 3rem);
+    border: 0.15rem solid rgba(5, 5, 5, 0.25);
+    border-radius: 0.7rem;
+}
+.survey .risk-loading-lg > span {
+    height: 35vh;
+    background-color: rgba(5, 5, 5, 0.18);
+}
+.survey .risk-loading-sm {
+    position: absolute;
+    top: 0;
+    left: 39vh;
+    margin: 1.5rem;
+    width: 29vh;
+    border: 0.15rem solid rgba(5, 5, 5, 0.25);
+    border-radius: 0.7rem;
+}
+.survey .risk-loading-sm > span {
+    height: 30vh;
+    background-color: rgba(5, 5, 5, 0.18);
+}
+
+/* --- error behaviour --- */
+.survey .modal-dialog .modal-header .modal-title .modalLine.error{
+    background-color: var(--error-color);
+}
+
+
+
+
+
+
+

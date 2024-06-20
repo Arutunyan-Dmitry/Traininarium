@@ -1,0 +1,594 @@
+.training-header-image {
+    height: 80vh;
+    background-image: url("../../images/training/training-bg.jpg");
+    background-size: cover;
+    padding: 20vh 10vw;
+    color: white;
+}
+.training-header-image .col > h1 {
+    font-family: var(--header-font-family);
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+.training-header-image .col > p {
+    font-size: 1.4rem;
+}
+.training {
+    margin: 10vh 8vw 5vh 8vw;
+}
+.training .pink-line {
+    height: 0.7rem;
+    width: 20vw;
+    background-color: var(--pink-color);
+    margin-bottom: 1rem;
+}
+.training .blue-line {
+    height: 0.7rem;
+    width: 20vw;
+    background-color: var(--dark-blue-color);
+    margin-bottom: 1rem;
+}
+.training .header {
+    padding: 5vh 5vw 5vh 5vw;
+    margin-bottom: 5rem;
+    background-color: rgba(var(--light-pink-color-rgba), 1);
+    border-radius: 3rem;
+}
+.training > h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0 2.5rem 0;
+}
+.training .header .adv {
+    background-color: white;
+    margin: 0 1rem;
+    padding: 2vh 1vw;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
+}
+.training .header .adv > h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+.training .header .adv > div {
+    height: 60%;
+    display: flex;
+    align-items: end;
+}
+.training .header .adv > div > h3 {
+    margin-top: auto;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.training .plans > p {
+    font-size: 1.3rem;
+    font-weight: 650;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.1rem solid lightgray;
+}
+.training .plans .all-plans, .training .plans .recommended-plans,
+.training .plans .my-plans, .training .plans .following-plans {
+    display: flex;
+    flex-wrap: wrap;
+}
+.training .plans .all-plans > div, .training .plans .recommended-plans > div,
+.training .plans .my-plans > div, .training .plans .following-plans > div  {
+    position: relative;
+    margin: 2rem 1.5rem;
+    width: 24.5vw;
+    height: 30vh;
+}
+.training .plans .corner-number {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-blue-color);
+    color: white;
+    border-radius: 1rem;
+    width: 3rem;
+    height: 3rem;
+    padding-top: 0.8rem;
+}
+.training .plans .corner-number > h1 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+.training .plans .corner-bottom-right {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-bottom-right-radius: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.training .plans .corner-bottom-left {
+    position: absolute;
+    z-index: 1;
+    top: 2.93rem;
+    left: -0.5rem;
+    border-top-left-radius: 1.5rem;
+    border-left: 0.5rem solid white;
+    border-top: 0.5rem solid white;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.training .plans .corner-top-right {
+    position: absolute;
+    z-index: 1;
+    top: -0.5rem;
+    left: 2.93rem;
+    border-top-left-radius: 1.5rem;
+    border-left: 0.5rem solid white;
+    border-top: 0.5rem solid white;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.training .plans .background {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(3.5rem 0%, 100% 0%, 100% 100%, 0% 100%, 0 3.5rem);
+    border-radius: 1rem;
+}
+.training .plans .plan-button {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    text-align: start;
+    border: none;
+    border-radius: 1rem;
+}
+.training .plans .plan-button:hover {
+    background-color: transparent;
+}
+.training .plans .content {
+    background-color: rgba(50, 50, 50, 0.5);
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    transition: 0.2s;
+}
+.training .plans .content:hover {
+    background-color: rgba(150, 150, 150, 0.2);
+    transition: 0.2s;
+}
+.training .plans .content > h1 {
+    color: white;
+    margin-left: 4.5rem;
+    padding: 0.5rem 0.3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.training .plans .content .container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+.training .plans .content .container > div {
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+}
+.training .plans .content .container > div > p {
+    color: white;
+    margin: 0 0 0.3rem 1.7rem;
+}
+.training .plans .content .container > div > button {
+    width: 113%;
+    margin: 0.8rem 0 0 1.7rem;
+}
+
+.training .plans > button {
+    position: relative;
+    margin: 2rem 1.5rem;
+    width: 24.5vw;
+    height: 30vh;
+    background-color: white;
+    font-weight: 550;
+    font-size: 1.2rem;
+    color: var(--dark-blue-color);
+    border: 0.3rem dotted var(--dark-blue-color);
+    border-radius: 1rem;
+}
+.training .plans > button:hover {
+    background-color: var(--light-grey-color);
+}
+.training .plans > button:active {
+    color: darkblue;
+    background-color: lightgray;
+}
+.training .plans > button > span {
+    font-size: 1.5rem;
+}
+
+.planConstructorModal .modal-dialog {
+    --bs-modal-width: 1320px !important;
+}
+.planConstructorModal .errorAlert {
+    position: absolute;
+    z-index: 5;
+    top: 8%;
+    left: 16%;
+    width: 68%;
+}
+.planConstructorModal .modal-dialog .modal-content .modal-title{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.planConstructorModal .modal-dialog .modal-content .modal-body{
+    height: 83vh;
+}
+.planConstructorModal .modal-dialog .modal-content .modal-body > form {
+    height: 100%;
+}
+.planConstructorModal .background {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey-color);
+}
+.planConstructorModal .background .content {
+    display: block;
+    width: 50%;
+    height: 85%;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+.planConstructorModal .background .picture {
+    display: block;
+    width: 20%;
+    height: 85%;
+    padding: 2rem;
+    margin-right: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+.planConstructorModal .background .picture .icon {
+    background-color: var(--light-grey-color);
+    padding: 0.3rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    text-align: center;
+    transition: 0.2s;
+}
+.planConstructorModal .background .picture .icon:hover {
+    background-color: lightgray;
+    transition: 0.2s;
+}
+.planConstructorModal .background .picture .picture-show {
+    width: 100%;
+    height: 15vh;
+    margin-top: 1rem;
+    background-size: cover;
+    border-radius: 0.5rem !important;
+}
+.planConstructorModal .background .content .training-amount {
+    display: flex;
+    align-items: center;
+}
+.planConstructorModal .background .content .training-amount > label {
+    width: 110%;
+}
+.planConstructorModal .background .content .training-amount-placeholder {
+    text-align: end;
+    font-size: 0.7rem;
+    margin: 0.3rem 1rem 0.5rem 0;
+}
+.planConstructorModal .background .content .bth-dark-blue {
+    border-radius: 0.5rem !important;
+}
+
+.planConstructorModal .right-plane .exerciseSearch {
+    padding-bottom: 1rem;
+    border-bottom: 0.3rem solid var(--light-grey-color);
+    margin-bottom: 1rem;
+}
+.planConstructorModal .right-plane {
+    max-width: 29%;
+}
+.planConstructorModal .right-plane .exerciseList {
+    height: 500px;
+    overflow-y: auto;
+}
+.planConstructorModal .right-plane .exerciseList .exerciseList-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--light-grey-color);
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+.planConstructorModal .right-plane .exerciseList .exerciseList-item > img {
+    width: 20%;
+    border-radius: 0.5rem;
+}
+.planConstructorModal .right-plane .exerciseList .exerciseList-item > p {
+    margin: 0 0 0 0.5rem;
+}
+
+.planConstructorModal .central-plane {
+    position: relative;
+}
+.planConstructorModal .central-plane .add-exercises {
+    position: absolute;
+    bottom: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.planConstructorModal .central-plane .add-exercises > button:hover {
+    color: white !important;
+    background-color: var(--dark-pink-color) !important;
+}
+.planConstructorModal .central-plane .constructor {
+    background-color: var(--light-grey-color);
+    height: 545px;
+    overflow-y: auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.planConstructorModal .central-plane .constructor .start,
+.planConstructorModal .central-plane .constructor .end {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    width: 50%;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+}.planConstructorModal .central-plane .constructor .end {
+    margin-bottom: 5.5rem;
+ }
+
+.planConstructorModal .central-plane .constructor .training-exercise {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 0.5rem;
+    margin: 0.5rem 0;
+}
+.planConstructorModal .central-plane .constructor .training-exercise .ex-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: var(--dark-blue-color);
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+.planConstructorModal .central-plane .constructor .training-exercise .ex-number > h1 {
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.planConstructorModal .central-plane .constructor .training-exercise .exercise {
+    position: relative;
+    display: flex;
+    width: 30vw;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+.planConstructorModal .central-plane .constructor .training-exercise .exercise > img{
+    width: 8rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+.planConstructorModal .central-plane .constructor .training-exercise .exercise > div{
+    padding-left: 0.5rem;
+}
+.planConstructorModal .central-plane .constructor .training-exercise .exercise > div > h1{
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem 1.5rem 0;
+
+}
+.planConstructorModal .central-plane .constructor .training-exercise .exercise .del-exercise {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.planConstructorModal .central-plane .constructor .training-exercise .exercise > div > p{
+    font-size: 0.9rem;
+    margin: 0;
+}
+.planConstructorModal .central-plane > p {
+    color: dimgrey;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+.planConstructorModal .left-plane {
+    max-width: 20%;
+    border-right: 0.1rem solid var(--light-grey-color);
+}
+.planConstructorModal .left-plane > img{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.planConstructorModal .left-plane > h2{
+    font-size: 1.2rem;
+    font-weight: 650;
+    border-bottom: 0.3rem solid var(--dark-blue-color);
+    margin-bottom: 1.5rem;
+}
+.planConstructorModal .left-plane > p{
+    margin-bottom: 0.3rem;
+}
+
+.planConstructorModal .creation-loading {
+    position: absolute;
+    z-index: 99;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: 96%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    opacity: 0;
+    transition: 0.2s;
+}
+.planConstructorModal .creation-loading > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.planConstructorModal .creation-loading > div > div{
+    width: 7rem;
+    height: 7rem;
+}
+.planConstructorModal .creation-loading > div > p{
+    color: var(--dark-blue-color);
+    font-size: 1.5rem;
+    font-weight: 650;
+    margin: 2rem 0;
+}
+.planConstructorModal .creation-loading.show {
+    display: flex;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.planModal .modal-dialog .modal-content .modal-header {
+    position: relative;
+    background-size: cover;
+}
+.planModal .modal-dialog .modal-content .modal-header .btn-close{
+    z-index: 1;
+    margin-bottom: auto;
+    margin-top: 0.2rem;
+    margin-right: 0.1rem;
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+.planModal .modal-dialog .modal-content .modal-header .delete-plan {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1;
+}
+.planModal .modal-dialog .modal-content .modal-title {
+    z-index: 1;
+    color: white;
+}
+.planModal .modal-dialog .modal-content .modal-title > h1 {
+    font-size: 1.6rem;
+    font-weight: 650;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+}
+.planModal .modal-dialog .modal-content .modal-title > p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    padding-left: 2.5rem;
+}
+.planModal .modal-dialog .modal-content .modal-header .background {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.5);;
+}
+.planModal .plan-detail-loading {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.planModal .plan-detail-loading > div {
+    margin: 1rem;
+}
+.planModal .modal-dialog .modal-content .modal-body {
+    height: 55vh;
+}
+.planModal .exercise-container {
+    height: 32vh;
+    overflow-y: auto;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.planModal .exercise-container .exercise {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.1rem solid lightgrey;
+}
+.planModal .exercise-container .exercise .number {
+    width: 2vw;
+    font-weight: 650;
+}
+.planModal .exercise-container .exercise .image > img {
+    width: 7vw;
+    border-radius: 0.5rem;
+}
+.planModal .exercise-container .exercise .name {
+    width: 20vw;
+    font-weight: 550;
+    margin-left: 1rem;
+}
+.planModal .exercise-container .exercise .amount-time {
+    width: 15vw;
+    margin-left: 1rem;
+}
+.planModal .exercise-container .exercise .amount-time > p > b {
+    font-weight: 650;
+}
+.planModal .exercise-container .exercise .rest-time {
+    width: 10vw;
+    margin-left: 1rem;
+}
+.planModal .exercise-container .exercise .rest-time > p > b {
+    font-weight: 650;
+}
+.planModal .performance-header, .planModal .exercise-header {
+    font-weight: 650;
+}
+.planModal .performance-label {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+.planModal .modal-footer .plan-mobile {
+    font-size: 0.9rem;
+}
+.planModal .modal-footer .plan-mobile > b {
+    color: red;
+}
+.planModal .modal-footer .plan-mobile > i {
+    color: var(--dark-blue-color);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+.planModal .modal-footer .plan-mobile > i:hover {
+    color: darkblue;
+    transition: 0.2s;
+}
